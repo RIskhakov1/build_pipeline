@@ -12,4 +12,4 @@ jobs:
             - name: Dependencies
               run: npm ci
             - name: Lint
-              run: npm run eslint --fix src/**/*.js  
+              run: npm run lint

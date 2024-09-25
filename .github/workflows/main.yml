@@ -10,7 +10,7 @@ on:
 
 jobs:
     build_test:
-        name: Run ${{matrix.os}} ${{matrix.node-version}}
+        name: Run OS:${{matrix.os}} Node:${{matrix.node-version}}
         runs-on: ${{matrix.os}}
         strategy:
             fail-fast: false
