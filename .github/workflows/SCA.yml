@@ -9,8 +9,8 @@ jobs:
     Check-Dependency-Vulnerabilities:
         runs-on: ubuntu-20.04
         steps:
-            - run: cat package.json
             - uses: actions/checkout@v3
+            - run: cat package.json
             - name: Contrast SCA action
               uses: Contrast-Security-OSS/contrast-sca-action@v1
               with:
