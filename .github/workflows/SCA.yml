@@ -10,8 +10,10 @@ jobs:
         runs-on: ubuntu-20.04
         steps:
             - uses: actions/checkout@v3
-            - run: cat package.json
-            - run: cat package-lock.json
+            - uses: actions/setup-node@v3
+              with:
+                node-version: 20.x
+                cache: npm
             - name: Contrast SCA action
               uses: Contrast-Security-OSS/contrast-sca-action@v1
               with:
@@ -19,6 +21,6 @@ jobs:
                 orgId: ${{ secrets.CONTRAST_ORGANIZATION_ID }}
                 authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
                 apiUrl: ${{ secrets.CONTRAST_API_URL }}
-                filePath: ./package.json
+                filePath: package.json
                 severity: medium
                 fail: true
