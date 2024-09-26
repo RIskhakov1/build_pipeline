@@ -15,7 +15,7 @@ jobs:
                 node-version: 20.x
                 cache: npm
             - name: Contrast SCA action
-              uses: Contrast-Security-OSS/contrast-sca-action@v1
+              uses: Contrast-Security-OSS/contrast-sca-action@v2
               with:
                 apiKey: ${{ secrets.CONTRAST_API_KEY }}
                 orgId: ${{ secrets.CONTRAST_ORGANIZATION_ID }}
