@@ -9,6 +9,7 @@ jobs:
     Check-Dependency-Vulnerabilities:
         runs-on: ubuntu-20.04
         steps:
+            - run: cat package.json
             - uses: actions/checkout@v3
             - name: Contrast SCA action
               uses: Contrast-Security-OSS/contrast-sca-action@v1
@@ -17,5 +18,6 @@ jobs:
                 orgId: ${{ secrets.CONTRAST_ORGANIZATION_ID }}
                 authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
                 apiUrl: ${{ secrets.CONTRAST_API_URL }}
+                filePath: ./package.json
                 severity: medium
                 fail: true
