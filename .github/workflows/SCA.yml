@@ -11,6 +11,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - run: cat package.json
+            - run: cat package-lock.json
             - name: Contrast SCA action
               uses: Contrast-Security-OSS/contrast-sca-action@v1
               with:
