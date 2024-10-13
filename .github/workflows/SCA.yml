@@ -1,8 +1,8 @@
 name: Contrast Security SCA
 on:
     workflow_dispatch:
-    schedule:
-        - cron: "0 21 * * SUN"
+#    schedule:
+#        - cron: "0 21 * * SUN"
     pull_request: 
         branches: [main]
 jobs:
